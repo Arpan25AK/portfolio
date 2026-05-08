@@ -1,95 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import bgPic from './assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg'
-import blockImg from './assets/blockImg.png'
-import helloimg from './assets/hello-world-html-code-768x384.png'
-import devflowImg from './assets/DevFlow Ecosystem-2026-05-07-090944.png'
-import gatewayImg from './assets/gateWay-Img.png'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import DevFlow from './pages/DevFlow'
+import ApiGateWay from './pages/ApiGateWay'
+import Sentinel from './pages/Sentinel'
+import ChatBot from './pages/ChatBot'
 
 function App(){
   return(
-    <div>
-      
-      <div className='bg'>
-        <img src={bgPic} alt="bgPic" />
-      </div>
-
-
-      <div className='header'>
-          <h1>Arpan A K</h1>
-            <div className='nav'>
-              <h3>Home</h3>
-              <h3> // skills </h3>
-              <h3> // projects</h3>
-              <h3> // Experience</h3>
-              <h3> // Contact</h3>
-
-            </div>
-      </div>
-
-        <img src={blockImg} alt="blockImg" className='block-img' />
-
-      <div className='sec-header'>
-        <p><span>ARPAN A K</span></p>
-      </div>
-
-      <div  className = 'contents'>
-        FullStack Software Developer <br />
-                   & <br />
-              Ai Enthusiast
-      </div>
-      
-
-      <div className='content-header'>
-        <h1>Skills</h1>
-      </div>
-
-      <div className='skill-grid'>
-        <div className='skill-card'>
-          <h2>BackEnd</h2>
-          <p className='tag'>&lt;h3&gt;</p>
-          <p className='card-desc'>Experienced in building robust server-side applications using Java and Spring Boot. Familiar with JWT authentication, event-driven architecture with Kafka.</p>
-          <p className='tag'>&lt;/h3&gt;</p>
-        </div>
-        <div className='skill-card'>
-          <h2>FrontEnd</h2>
-          <p className='tag'>&lt;h3&gt;</p>
-          <p className='card-desc'>Passionate about building responsive UIs. Experienced in HTML5, CSS, JavaScript and React for building modern web applications.</p>
-          <p className='tag'>&lt;/h3&gt;</p>
-        </div>
-      </div>
-
-      <div className='helloImg'>
-          <img src={helloimg} alt="helloimg" />
-      </div>
-
-      <div className='content-header'>
-        <h1>Projects</h1>
-      </div>
-
-      {/* temporarliy removed due to ugliness
-      <div>
-        <h1 className='content-header' style={{textAlign : 'left', padding: '10px' , marginLeft : '20%', display: 'flex'}}>DevFlow</h1>
-        <img src={devflowImg} alt="chart" className='project-imgs'
-        style={{transform: 'translate(15%, -2%)', borderRadius : '25px'}}/>   
-
-        <h1 className='content-header' 
-        style={{textAlign : 'right', padding: '10px' , 
-        marginRight : '20%', marginTop : '-500px'}}>ApiGateWay</h1> 
-        <img src={gatewayImg} alt="gatewayImg" 
-        className='project-imgs'
-        style={{transform: 'translate(140%, -2%)', borderRadius: '25px'}}/>  
-      </div>
-        */}
-
-
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/devflow" element={<DevFlow />} />
+      <Route path="/apigateway" element={<ApiGateWay />} />
+      <Route path="/sentinel" element={<Sentinel />} />
+      <Route path="/chatbot" element={<ChatBot />} />
+    </Routes>
   )
 }
 
 export default App
-
-

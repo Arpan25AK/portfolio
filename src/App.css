@@ -125,5 +125,20 @@
   z-index: 1;
 }
 
+.explore-headers{
+  color: black;
+  font-size: 1.7vw;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 10px;
+  background-color: cyan;
+  object-fit: cover;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+
+
 
 

@@ -61,38 +61,50 @@ function Home(){
       </div>
 
       <div className='content-header'>
-        <h1>Projects</h1>
-      </div>
-
-      <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', padding:'0 20%'}}>
-        <h1 className='content-header' style={{margin:0}}>DevFlow</h1>
-        <h1 className='content-header' style={{margin:0}}>ApiGateWay</h1>
-      </div>
-
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
-        <div onClick={() => navigate('/devflow')} style={{cursor:'pointer', width:'fit-content', marginLeft : '20%'}}>
-          <h1 className='explore-headers'>Explore // </h1>
+          <h1>Projects</h1>
         </div>
 
-        <div onClick={() => navigate('/apigateway')} style={{cursor:'pointer', width:'fit-content', marginRight : '21%'}}>
-          <h1 className='explore-headers'>Explore // </h1>
-        </div>
-      </div>
+        <div className='projects-grid'>
+          <div className='card' onClick={() => navigate('/devflow')}>
+            <div className='align'>
+              <div className='red'></div>
+              <div className='yellow'></div>
+              <div className='green'></div>
+            </div>
+            <h2>DevFlow</h2>
+            <p>Event-driven microservices version control platform using Java, Spring Boot, Kafka and PostgreSQL.</p>
+          </div>
 
-      <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', padding:'0 20%', marginTop : '50px'}}>
-        <h1 className='content-header' style={{margin:0, marginLeft :'25%'}}>Sentinel</h1>
-        <h1 className='content-header' style={{margin:0, marginRight : '25%'}}>ChatBot</h1>
-      </div>
+          <div className='card' onClick={() => navigate('/apigateway')}>
+            <div className='align'>
+              <div className='red'></div>
+              <div className='yellow'></div>
+              <div className='green'></div>
+            </div>
+            <h2>ApiGateWay</h2>
+            <p>Scalable API Gateway with JWT auth, Redis rate limiter and dynamic routing for Gemini and Groq.</p>
+          </div>
 
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
-        <div onClick={() => navigate('/sentinel')} style={{cursor:'pointer', width:'fit-content', marginLeft : '20%'}}>
-          <h1 className='explore-headers'>Explore // </h1>
-        </div>
+          <div className='card' onClick={() => navigate('/sentinel')}>
+            <div className='align'>
+              <div className='red'></div>
+              <div className='yellow'></div>
+              <div className='green'></div>
+            </div>
+            <h2>Sentinel</h2>
+            <p>Async notification microservice using Kafka for real-time event-driven email dispatch.</p>
+          </div>
 
-        <div onClick={() => navigate('/chatbot')} style={{cursor:'pointer', width:'fit-content', marginRight : '21%'}}>
-          <h1 className='explore-headers'>Explore // </h1>
+          <div className='card' onClick={() => navigate('/chatbot')}>
+            <div className='align'>
+              <div className='red'></div>
+              <div className='yellow'></div>
+              <div className='green'></div>
+            </div>
+            <h2>ChatBot</h2>
+            <p>RAG chatbot using OpenAI GPT-4o with semantic search via all-mpnet-base-v2 embeddings.</p>
+          </div>
         </div>
-      </div>
       
 
     </div>

@@ -3,7 +3,7 @@ import '../App.css'
 import bgPic from '../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg'
 import blockImg from '../assets/blockImg.png'
 import helloimg from '../assets/hello-world-html-code-768x384.png'
-import devflowImg from '../assets/DevFlow Ecosystem-2026-05-07-090944.png'
+
 
 
 function Home(){

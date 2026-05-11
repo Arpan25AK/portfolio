@@ -123,6 +123,17 @@ function Home() {
             </div>
           </div>
 
+          <div className='content-header' style={{marginTop: '200px'}}>
+            <h1>Prior <br/>
+              Experience</h1>
+            <div>
+              <button onClick={() => navigate('/experience')} className='back-button'
+              style={{textDecoration: 'underline', textDecorationColor: 'antiquewhite'}}>
+                <h1>See Experience</h1>
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
   )

@@ -4,6 +4,7 @@ import DevFlow from './pages/DevFlow'
 import ApiGateWay from './pages/ApiGateWay'
 import Sentinel from './pages/Sentinel'
 import ChatBot from './pages/ChatBot'
+import Experience from './pages/Experience'
 
 function App(){
   return(
@@ -13,6 +14,7 @@ function App(){
       <Route path="/apigateway" element={<ApiGateWay />} />
       <Route path="/sentinel" element={<Sentinel />} />
       <Route path="/chatbot" element={<ChatBot />} />
+      <Route path="/experience" element={<Experience />} />
     </Routes>
   )
 }

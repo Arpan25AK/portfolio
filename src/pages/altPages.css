@@ -125,8 +125,6 @@
     100% { transform: translateY(200%); opacity: 0; }
 }
 
-
-
 .page-content {
     position: relative;
     z-index: 1;
@@ -146,7 +144,6 @@
 .side-header{
     margin-left: 20px;
     color: grey;
-
 }
 
 .heading{
@@ -230,4 +227,89 @@
     left: 50%;
     top: 50%;
     transform: translate(95%, 10%);
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — TABLET (max 768px)
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+    .back-button {
+        margin-left: 15px;
+        font-size: 3.5vw;
+        padding: 8px;
+    }
+
+    .side-header { margin-left: 15px; }
+    .side-header h3 { font-size: 3.5vw; }
+
+    .heading {
+        font-size: 9vw;
+        margin-top: -5px;
+    }
+
+    /* Stack overview content vertically */
+    .overview-content {
+        flex-direction: column;
+        margin-top: 30px;
+        font-size: 3.5vw;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .overview-content p { margin-top: 0; }
+
+    /* Remove forced line breaks on mobile */
+    .overview-content p br { display: none; }
+
+    .project-meta {
+        margin-left: 0;
+        margin-top: 30px;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .meta-row { gap: 20px; }
+
+    .meta-item h4 { font-size: 3.5vw; }
+    .meta-item p  { font-size: 3vw; }
+
+    .open-project { font-size: 3.5vw; }
+
+    .outro {
+        font-size: 3vw;
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+
+    .dogo {
+        width: 80vw;
+        height: 80vw;
+        transform: translate(10%, 5%);
+    }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — MOBILE (max 480px)
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+    .back-button { font-size: 4.5vw; }
+
+    .side-header h3 { font-size: 4vw; }
+
+    .heading { font-size: 11vw; }
+
+    .overview-content { font-size: 4vw; }
+
+    .meta-item h4 { font-size: 4.5vw; }
+    .meta-item p  { font-size: 4vw; }
+
+    .open-project { font-size: 4.5vw; }
+
+    .outro { font-size: 4vw; }
+
+    .dogo {
+        width: 90vw;
+        height: 90vw;
+        transform: translate(5%, 5%);
+    }
 }

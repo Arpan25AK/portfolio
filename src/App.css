@@ -160,11 +160,11 @@
 .block-img {
   width: 40%;
   opacity: 0.8;
-  position: absolute;        /* fixed to viewport, not page */
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -220%);
-  z-index: 0;             /* above matrix, below content */
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -315,16 +315,6 @@
   opacity: 1;
 }
 
-/* ─────────────────────────────────────────
-   RESPONSIVE
-───────────────────────────────────────── */
-@media (max-width: 768px) {
-  .matrix-column { font-size: 14px; line-height: 16px; width: 18px; }
-}
-@media (max-width: 480px) {
-  .matrix-column { font-size: 12px; line-height: 14px; width: 15px; }
-}
-
 .social-contacts{
   margin-top: -30px;
   color: white;
@@ -333,4 +323,105 @@
   text-decoration: none;
   padding-bottom: 10px;
   margin-left: 2px;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — TABLET (max 768px)
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .matrix-column { font-size: 14px; line-height: 16px; width: 18px; }
+
+  /* Header: stack name above nav */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+    padding: 8px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    margin-right: 0;
+    gap: 6px;
+    padding: 4px 0;
+  }
+
+  .nav h3 {
+    font-size: 3.5vw;
+    margin: 0;
+  }
+
+  /* Hero */
+  .block-img { display: none; }
+
+  .sec-header {
+    font-size: 14vw;
+    margin-top: 10px;
+  }
+
+  .contents {
+    font-size: 5vw;
+    margin-top: -10px;
+  }
+
+  /* Section headers */
+  .content-header {
+    font-size: 6vw;
+    margin-top: 60px;
+  }
+
+  /* Skills: single column */
+  .skill-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .skill-card h2 { font-size: 4vw; }
+  .tag           { font-size: 2.5vw; }
+  .card-desc     { font-size: 3vw; }
+
+  /* Hello image: hide on mobile (it's positioned weirdly) */
+  .helloImg { display: none; }
+
+  /* Project cards: full width */
+  .card {
+    width: 85%;
+    transform: skewX(0deg);
+  }
+
+  .card:hover {
+    transform: skew(0deg);
+  }
+
+  .card h2 { font-size: 1.8rem; }
+  .card p  { font-size: 1rem; }
+
+  /* Contacts */
+  .social-contacts { font-size: 5vw; }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — MOBILE (max 480px)
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .matrix-column { font-size: 12px; line-height: 14px; width: 15px; }
+
+  .header { margin-left: 10px; }
+
+  .nav h3 { font-size: 3vw; }
+
+  .sec-header { font-size: 16vw; }
+
+  .contents { font-size: 6vw; }
+
+  .content-header { font-size: 8vw; }
+
+  .skill-card { padding: 18px; }
+  .skill-card h2 { font-size: 5vw; }
+  .tag           { font-size: 3vw; }
+  .card-desc     { font-size: 3.5vw; }
+
+  .card { width: 90%; }
+
+  .social-contacts { font-size: 6vw; }
 }

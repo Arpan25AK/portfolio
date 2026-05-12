@@ -6,6 +6,10 @@ import helloimg from '../assets/hello-world-html-code-768x384.png'
 function Home() {
   const navigate = useNavigate()
 
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const matrixColumns = Array.from({ length: 60 }, (_, i) => (
       <div
           key={i}
@@ -34,17 +38,17 @@ function Home() {
           <div className='header'>
             <h1>Arpan A K</h1>
             <div className='nav'>
-              <h3>Home</h3>
-              <h3> // skills </h3>
-              <h3> // projects</h3>
-              <h3> // Experience</h3>
-              <h3> // Contact</h3>
+              <h3 onClick={() => scrollTo('hero')} style={{cursor:'pointer'}}>Home</h3>
+              <h3 onClick={() => scrollTo('skills')} style={{cursor:'pointer'}}> // skills </h3>
+              <h3 onClick={() => scrollTo('projects')} style={{cursor:'pointer'}}> // projects</h3>
+              <h3 onClick={() => scrollTo('experience')} style={{cursor:'pointer'}}> // Experience</h3>
+              <h3 onClick={() => scrollTo('contacts')} style={{cursor:'pointer'}}> // Contact</h3>
             </div>
           </div>
 
           <img src={blockImg} alt="blockImg" className='block-img' style={{position : 'absolute'}} />
 
-          <div className='sec-header'>
+          <div id='hero' className='sec-header'>
             <p><span>ARPAN A K</span></p>
           </div>
 
@@ -54,7 +58,7 @@ function Home() {
             Ai Enthusiast
           </div>
 
-          <div className='content-header'>
+          <div id='skills' className='content-header'>
             <h1>Skills</h1>
           </div>
 
@@ -77,7 +81,7 @@ function Home() {
             <img src={helloimg} alt="helloimg" />
           </div>
 
-          <div className='content-header'>
+          <div id='projects' className='content-header'>
             <h1>Projects</h1>
           </div>
 
@@ -123,17 +127,25 @@ function Home() {
             </div>
           </div>
 
-          <div className='content-header' style={{marginTop: '200px'}}>
+          <div id='experience' className='content-header' style={{marginTop: '200px'}}>
             <h1>Prior <br/>
               Experience</h1>
             <div>
               <button onClick={() => navigate('/experience')} className='back-button'
-              style={{textDecoration: 'underline', textDecorationColor: 'antiquewhite'}}>
+                      style={{textDecoration: 'underline', textDecorationColor: 'antiquewhite' , marginTop: '-40px', marginLeft: '-5px'}}>
                 <h1>See Experience</h1>
               </button>
             </div>
           </div>
 
+
+          <div id='contacts' className='content-header' style={{marginTop : '150px'}}>
+            <h1>contacts</h1>
+            <div className='social-contacts'>
+              <a href="https://github.com/Arpan25AK" target='_blank' className='social-contacts'> Github</a> <br/>
+              <a href="https://www.linkedin.com/in/arpan-anand-kotian-104897364/" target='_blank' className='social-contacts' style={{marginTop : '80px'}}>LinkedIn</a>
+            </div>
+          </div>
         </div>
       </div>
   )

@@ -6,12 +6,30 @@ import dogo from "../assets/doggo.jpeg"
 function Experience() {
     const navigate = useNavigate()
 
-    return(
-        <div>
+    const matrixColumns = Array.from({ length: 60 }, (_, i) => (
+        <div
+            key={i}
+            className="matrix-column"
+            style={{
+                left: `${(i / 60) * 100}vw`,
+                animationDuration: `${2.3 + Math.random() * 2.2}s`,
+                animationDelay: `-${Math.random() * 4}s`,
+            }}
+        />
+    ))
 
-            <div className='bg'>
-                <img src={bgPic} alt="bgPic" />
+    return(
+        <div className='animated-bg'>
+
+            {/* Matrix background */}
+            <div className="matrix-container">
+                <div className="matrix-pattern">
+                    {matrixColumns}
+                </div>
             </div>
+
+            {/* Page content */}
+            <div className='page-content'>
 
             <div>
                 <button onClick={() => navigate('/')} className='back-button'>
@@ -25,7 +43,7 @@ function Experience() {
             <div>
                 <img src={dogo} alt="dogo" className='dogo'/>
             </div>
-
+            </div>
         </div>
     )
 }

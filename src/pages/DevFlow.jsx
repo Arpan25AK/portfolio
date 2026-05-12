@@ -61,15 +61,34 @@ const edges = [
 function DevFlow(){
   const navigate = useNavigate()
 
+  const matrixColumns = Array.from({ length: 60 }, (_, i) => (
+      <div
+          key={i}
+          className="matrix-column"
+          style={{
+            left: `${(i / 60) * 100}vw`,
+            animationDuration: `${2.3 + Math.random() * 2.2}s`,
+            animationDelay: `-${Math.random() * 4}s`,
+          }}
+      />
+  ))
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return(
-      <div>
-        <div className='bg'>
-          <img src={bgPic} alt="bgPic" />
+      <div className='animated-bg'>
+
+        {/* Matrix background */}
+        <div className="matrix-container">
+          <div className="matrix-pattern">
+            {matrixColumns}
+          </div>
         </div>
+
+        {/* Page content */}
+        <div className='page-content'>
 
         <div>
           <button onClick={() => navigate('/')} className='back-button'>
@@ -136,6 +155,7 @@ function DevFlow(){
           <span style={{color:'cyan', textDecoration:'underline', textDecorationColor:'cyan'}}>@</span>
           Arpan AK made with passion
         </p>
+          </div>
       </div>
   )
 }

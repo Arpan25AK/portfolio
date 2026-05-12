@@ -139,7 +139,7 @@ function Home() {
           </div>
 
 
-          <div id='contacts' className='content-header' style={{marginTop : '150px'}}>
+          <div id='contacts' className='content-header' style={{marginTop : '250px'}}>
             <h1>contacts</h1>
             <div className='social-contacts'>
               <a href="https://github.com/Arpan25AK" target='_blank' className='social-contacts'> Github</a> <br/>
